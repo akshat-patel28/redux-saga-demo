@@ -4,7 +4,9 @@ import { getPost } from "./postSlice";
 
 const Post = () => {
   const post = useSelector((state) => state.post.post);
+  const error = useSelector((state) => state.post.error);
   const dispatch = useDispatch();
+  console.log(error, post);
 
   useEffect(() => {
     dispatch(getPost());
